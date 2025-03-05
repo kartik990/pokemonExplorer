@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 shadow-lg text-[#003a70] flex items-center gap-6">
+    <footer className="bg-gray-100 shadow-lg text-[#003a70] flex items-center">
       <Image
         src="/images/footerImg.jpg"
         width={1000}
@@ -10,7 +10,7 @@ const Footer = () => {
         alt="footer image"
         className="w-1/2 h-auto "
       />
-      <div className="container mx-auto text-center">
+      <div className="px-4 mx-auto text-center">
         <p className="text-xs md:text-lg">
           © 2025 Pokemon. All Rights Reserved.
         </p>
