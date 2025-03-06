@@ -19,7 +19,7 @@ const HomePage: React.FC<HomePageProps> = ({ pokemonList }) => {
         <Image
           src="/images/logo.png"
           width={1000}
-          height={1000}
+          height={400}
           alt="logo"
           className="w-[80%] md:w-[420px] h-auto"
         />

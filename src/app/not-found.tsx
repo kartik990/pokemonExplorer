@@ -9,7 +9,7 @@ export default function NotFound() {
         <Image
           src="/images/logo.png"
           width={1000}
-          height={1000}
+          height={400}
           alt="logo"
           className="w-[80%] md:w-[320px] lg:w-[420px] h-auto"
         />
