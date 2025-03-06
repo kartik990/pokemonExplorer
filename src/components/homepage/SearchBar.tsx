@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Tag from "../ui/typography/Tag";
 import { LabeledAPIResource } from "@/types/pokemon";
 import { Search, X } from "lucide-react";
 import Image from "next/image";
@@ -25,8 +24,8 @@ const SearchBar: React.FC<SearchProps> = ({ list, setFilteredList }) => {
   }, [searchKey, list, setFilteredList]);
 
   return (
-    <div className="w-full flex justify-center mt-20 my-4 md:my-10 md:mt-20">
-      <div className="bg-white flex items-center gap-2 px-4 py-0 pr-28 md:pr-36 rounded-lg text-md relative shadow-lg md:min-w-[60vw] ">
+    <div className="w-full sticky flex justify-center mt-20 my-4 md:my-10 md:mt-20">
+      <div className="bg-white flex items-center gap-2 px-6 py-0 rounded-lg text-md relative shadow-lg min-w-[90%] md:min-w-[60vw] ">
         <div>
           <Search className="scale-90 text-[#003a70]" />
         </div>
@@ -58,19 +57,16 @@ const SearchBar: React.FC<SearchProps> = ({ list, setFilteredList }) => {
           placeholder="Who are we looking for..."
           value={searchKey}
           onChange={(e) => setSearchKey(e.target.value)}
-          className="outline-none h-14  w-full "
+          className="outline-none h-14 ml-4 w-full "
         />
         {searchKey.length > 1 && (
           <div
             onClick={handleResetSerachKey}
-            className="text-gray-400 absolute right-30 top-4 cursor-pointer"
+            className="text-gray-400 cursor-pointer"
           >
             <X />
           </div>
         )}
-        <button className="bg-[#003a70] cursor-pointer hover:bg-[#3d7dca] py-2 px-6 rounded-lg text-white absolute top-2 right-2 text-md">
-          <Tag>Search</Tag>
-        </button>
       </div>
     </div>
   );
